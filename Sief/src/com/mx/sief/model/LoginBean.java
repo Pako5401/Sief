@@ -7,14 +7,42 @@
  * evisions:
  * Ver        Date               Author              Description
  * ---------  ---------------  -------------------  --------------------                
-*/
+ */
 package com.mx.sief.model;
 
 /**
- * Clase encargada de persistir los datos obtenidos de la bd y/o datos
- * que ingrese el usuario mediante setters y getters, no contendra logica
- * de negocio ni conexion a bd.
+ * Clase encargada de persistir los datos obtenidos de la bd y/o datos que
+ * ingrese el usuario mediante setters y getters, no contendra logica de negocio
+ * ni conexion a bd.
  */
 public class LoginBean {
-       
+
+    private String nombre;
+    private String apellido;
+    private String tipo;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
 }
