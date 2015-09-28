@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 /**
@@ -23,7 +24,8 @@ public class LoginForm extends JFrame implements ActionListener {
     private Login login;
     private JLabel labelTitulo, labelSeleccion, lblUser, lblPass;
     private JButton acces;
-    public JTextField jTextField1, jTextField2;
+    public JTextField txtUser;
+    public JPasswordField txtPass;
 
     /**
      * constructor de la clase donde se inicializan todos los componentes de la
@@ -51,10 +53,10 @@ public class LoginForm extends JFrame implements ActionListener {
         lblPass.setBounds(70, 150, 120, 30);
         lblPass.setFont(new java.awt.Font("Verdana", 1, 15));
 
-        jTextField1 = new JTextField();
-        jTextField2 = new JTextField();
-        jTextField1.setBounds(250, 100, 150, 40);
-        jTextField2.setBounds(250, 150, 150, 40);
+        txtUser = new JTextField();
+        txtPass = new JPasswordField();
+        txtUser.setBounds(250, 100, 150, 40);
+        txtPass.setBounds(250, 150, 150, 40);
 
         labelSeleccion = new JLabel();
         labelSeleccion.setText("Hoy es un buen día!");
@@ -63,8 +65,8 @@ public class LoginForm extends JFrame implements ActionListener {
         add(acces);
         add(labelSeleccion);
         add(labelTitulo);
-        add(jTextField1);
-        add(jTextField2);
+        add(txtUser);
+        add(txtPass);
         add(lblUser);
         add(lblPass);
 
@@ -73,16 +75,14 @@ public class LoginForm extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         setResizable(false);
         setLayout(null);
-
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == acces) {
            login=new Login();
-            login.valUsuarios(jTextField1.getText(), jTextField2.getText());
+            login.valUsuarios(txtUser.getText(), txtPass.getText());
             System.out.println("Execute btn");
         }
-
     }
 }
