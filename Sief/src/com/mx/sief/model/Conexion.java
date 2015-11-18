@@ -33,7 +33,7 @@ public class Conexion {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Conectado, Encontro la libreria");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost/sief", "root", "root");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost/sief", "root", "pako");
             return true;
         } catch (ClassNotFoundException e) {
             System.out.println("No conectado, No encontro la libreria");
